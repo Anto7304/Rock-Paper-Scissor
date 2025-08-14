@@ -1,0 +1,23 @@
+p{
+    font-family: Arial;
+    font-size: 18px;
+}
+
+.js-input{
+    padding:15px 30px 15px 10px;
+}
+
+.js-input::placeholder{
+
+    font-size: 18px;
+}
+
+.calculate {
+    padding: 12px 15px 16px 11px;
+    font-family: Arial;
+    font-size: 18px;
+    background-color: green;
+    color: White;
+    border: none;
+}
+

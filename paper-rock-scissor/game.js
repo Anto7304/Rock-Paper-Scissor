@@ -92,7 +92,7 @@ function humanMove(selected){
 
      document.querySelector('.js-score').innerHTML = `${result}`
 
-     document.querySelector('.js-move').innerHTML = `Your selected ${selected} :  computer selected ${choice}`
+     document.querySelector('.js-move').innerHTML = `You <img class="image-move"src="./image/${selected}-emoji.png"> : <img class="image-move"src="./image/${choice}-emoji.png"> computer`
 
 }
 

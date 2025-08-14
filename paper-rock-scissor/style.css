@@ -1,0 +1,47 @@
+body{
+    background-color: black;
+    color:white;
+    font-family: Arial;
+    
+    font-size: 35px;
+}
+
+.button-move{
+    background-color: transparent;
+    border: 3px solid white;
+    height: 120px;
+    width: 120px;
+    padding: 0px;
+    border-radius: 60px;
+    margin-right: 10px;
+   
+
+}
+.image-move{
+  height: 50px;
+  
+}
+
+.js-score{
+    margin-top: 60px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.js-move{
+    margin-top: 33px;
+    font-size: 20px;
+}
+
+.js-results{
+    font-size: 18px;
+    margin-top: 65px;
+    margin-bottom: 08px;
+}
+
+.reset-button{
+    padding: 10px 15px;
+    border: none;
+    font-size: 17px;
+    margin-top: 20px;
+}

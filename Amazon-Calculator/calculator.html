@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <p>Amazon Shipping Calculator</p>
     <p>Orders under $40 = +$10 shipping</p>
     <p> orders over $40 = FREE shipping</p>
 
-    <input class="js-input" onkeydown="handleKey(event)">
-
+    <input class="js-input" placeholder="Cost of order" onkeydown="handleKey(event)">
+    <button class="calculate"onclick="calculate()">Calculate</button>
     <p class="js-cost" onclick=""></p>
-    <button onclick="calculate()">Calculate</button>
+    
 
     <script src="./calculator.js"></script>
 </body>
