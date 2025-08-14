@@ -1,3 +1,6 @@
+
+
+// function for computer move 
 function compMove (){
     const randomNumber = Math.random()
 
@@ -18,6 +21,15 @@ function compMove (){
     return computerMove;
 }
 
+// score object for storing the resulst
+let score = JSON.parse(localStorage.getItem('scores')) || {
+    Win: 0,
+    Draw: 0,
+    Loose: 0
+}
+
+updateScore()
+// human move function
 function humanMove(selected){
     const choice =compMove()
     
@@ -58,5 +70,45 @@ function humanMove(selected){
             result = 'Draw'
         }
     }
- alert (`computer selected ${choice}.You selected ${selected}.Results ${result}`)
+
+    //uupdating the scores in the object i.e win loose draw
+    if (result === 'Looser'){
+        score.Loose +=1
+    }
+    else if (result === 'Draw'){
+        score.Draw +=1
+    }
+
+    else if(result === 'Winner') {
+        score.Win +=1
+    }
+// set the results in the local storage
+    localStorage.setItem('scores', JSON.stringify(score))
+
+
+     document.querySelector('.js-results').innerHTML = `win: ${score.Win}, Draw: ${score.Draw}, Loose: ${score.Loose}`
+
+
+
+     document.querySelector('.js-score').innerHTML = `${result}`
+
+     document.querySelector('.js-move').innerHTML = `Your selected ${selected} :  computer selected ${choice}`
+
 }
+
+function updateScore(){
+    document.querySelector('.js-results').innerHTML = `win: ${score.Win}, Draw: ${score.Draw}, Loose: ${score.Loose}`
+}
+ // Reset function
+function Reset(){
+    score={
+   Win: 0,
+   Draw: 0,
+    Loose: 0
+}
+   
+   localStorage.removeItem
+   updateScore()
+}
+
+//dom

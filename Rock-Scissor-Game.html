@@ -6,6 +6,7 @@
     <title>Rock-Paper-Scissor-Game</title>
 </head>
 <body>
+    <p>Rock Paper Scissors</p>
    <button onClick="
    compMove();
    humanMove('Rock')
@@ -18,6 +19,11 @@
    compMove();
    humanMove('Scissor')
    ">Scissor</button>
+   <p class="js-score"></p>
+   <p class="js-move"></p>
+   <p class="js-results"></p>
+   <button onClick="
+   Reset()">Reset</button>
     <script src="./game.js"></script>
 </body>
 </html>
