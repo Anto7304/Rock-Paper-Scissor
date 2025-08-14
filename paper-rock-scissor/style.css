@@ -14,11 +14,13 @@ body{
     padding: 0px;
     border-radius: 60px;
     margin-right: 10px;
+    cursor: pointer;
    
 
 }
 .image-move{
   height: 50px;
+  
   
 }
 
@@ -31,6 +33,7 @@ body{
 .js-move{
     margin-top: 33px;
     font-size: 20px;
+    
 }
 
 .js-results{
@@ -44,6 +47,7 @@ body{
     border: none;
     font-size: 17px;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .reset-all-scores,
