@@ -45,3 +45,8 @@ body{
     font-size: 17px;
     margin-top: 20px;
 }
+
+.reset-all-scores,
+.reset-all-moves{
+    display: none;
+}

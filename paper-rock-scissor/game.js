@@ -105,10 +105,34 @@ function Reset(){
    Win: 0,
    Draw: 0,
     Loose: 0
+
+   
 }
    
    localStorage.removeItem
    updateScore()
+
+   clear()
 }
 
+function clear(){
+    const scoreParagraph = document.querySelector('.js-score')
+    const moveParagraph = document.querySelector('.js-move')
+    
+
+
+    scoreParagraph.classList.add('reset-all-scores')
+    moveParagraph.classList.add('reset-all-moves')
+    
+ 
+}
+function returnResult(){
+        const scoreParagraph = document.querySelector('.js-score')
+    const moveParagraph = document.querySelector('.js-move')
+    
+
+
+    scoreParagraph.classList.remove('reset-all-scores')
+    moveParagraph.classList.remove('reset-all-moves')
+}
 //dom
