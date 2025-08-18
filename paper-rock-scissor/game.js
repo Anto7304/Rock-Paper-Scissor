@@ -29,6 +29,33 @@ let score = JSON.parse(localStorage.getItem('scores')) || {
 }
 
 updateScore()
+
+
+let isAutoPlaying = false;
+let setIntervalId= ''
+const autoPlayButton = document.querySelector('.Auto-play');
+function autoPlay(){
+    
+    
+    if (!isAutoPlaying){
+        setIntervalId=setInterval(function(){
+            const selected = compMove()
+            humanMove(selected);
+        }, 1000)
+        isAutoPlaying = true;
+        autoPlayButton.innerHTML= 'Stop Playing'
+
+      
+    }else {
+        clearInterval(setIntervalId)
+        autoPlayButton.innerHTML = 'Auto Playing'
+        isAutoPlaying=false
+        autoPlay.classList.remove
+        
+    }
+
+    
+}
 // human move function
 function humanMove(selected){
     const choice =compMove()
@@ -113,6 +140,13 @@ function Reset(){
    updateScore()
 
    clear()
+
+   // it stop the auto play when you click the  Reset
+      clearInterval(setIntervalId)
+        autoPlayButton.innerHTML = 'Auto Playing'
+        isAutoPlaying=false
+        autoPlay.classList.remove
+        
 }
 
 function clear(){
@@ -135,4 +169,8 @@ function returnResult(){
     scoreParagraph.classList.remove('reset-all-scores')
     moveParagraph.classList.remove('reset-all-moves')
 }
-//dom
+
+
+// function to change the name of auto play button to stop
+
+
